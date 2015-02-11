@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper,titlepage]{report}
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+
+% Seiten ordentlich ausnutzen
+\usepackage[a4paper]{geometry}
+
+% Palatino fonts
+\usepackage{mathpazo}
+\linespread{1.05}
+
+% Fuer URLs in Quellenangaben
+\usepackage{url}
+\usepackage{ucs}
+\usepackage{graphicx}
+
+% Fuer counterwithin und counterwithout
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+
+% Inhaltsverzeichnis und Literaturverzeichnis verlinken
+\usepackage[backref, bookmarks]{hyperref}
+
+% Subsections nicht im Inhaltsverzeichnis
+\setcounter{tocdepth}{2}
+
+% Footnotes auf jeder Seite neu durchnimmerieren
+\usepackage{footnpag}
+
+% Glossar
+\usepackage[section=subsection]{glossaries}
+\include{glossar}
+\makeglossaries{}
+
+% Syntax Highlight
+\usepackage{minted}
+\usemintedstyle{tango}
+\newminted{cpp}{linenos,}
+
+\author{Wieland Hoffmann}
+\title{ {{cookiecutter.title}} }
+\begin{document}
+
+\maketitle
+\tableofcontents
+\include{einleitung}
+\include{fazit}
+\include{anhang}
+\listoffigures
+\bibliographystyle{alpha}
+\bibliography{ {{cookiecutter.repo_name}} }
+\end{document}

@@ -1,0 +1,23 @@
+pkgname={{ cookiecutter.repo_name}}-git
+pkgver=1
+pkgrel=1
+pkgdesc=""
+arch=("any")
+url="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name}}"
+license=('MIT')
+source=('git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name}}')
+md5sums=('SKIP')
+depends=('{{ cookiecutter.python_binary }}')
+makedepends=('git')
+
+pkgver(){
+  cd "${srcdir}/{{ cookiecutter.repo_name }}"
+  echo "$(git describe --tags --always | sed 's/-/./g' )"
+}
+
+package() {
+  cd "${srcdir}/{{ cookiecutter.repo_name }}"
+  {{ cookiecutter.python_binary }} setup.py install --root="$pkgdir" --optimize=1
+}
+
+# vim:set ts=2 sw=2 et:
