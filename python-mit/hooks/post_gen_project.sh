@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-source $(which virtualenvwrapper.sh) && mkvirtualenv -p {{ cookiecutter.python_binary }} -a $(pwd) {{ cookiecutter.repo_name }}
+source $(which virtualenvwrapper.sh) && mkvirtualenv -p /usr/bin/{{ cookiecutter.python_binary }} -a $(pwd) {{ cookiecutter.repo_name }}
 git init
 git add .
 git rm --cached */version.py
