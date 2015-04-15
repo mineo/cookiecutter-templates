@@ -101,5 +101,8 @@ setup(name="{{ cookiecutter.repo_name }}",
                    "Programming Language :: Python :: 2.7"],
       cmdclass={"version": Version, "sdist": sdist, "build": build},
       description="{{ cookiecutter.short_description }}",
-      long_description=open("README.rst").read()
+      long_description=open("README.rst").read(),
+      extras_require={
+          'docs': ['sphinx']
+      }
       )
