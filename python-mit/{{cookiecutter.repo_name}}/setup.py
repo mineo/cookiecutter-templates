@@ -33,7 +33,7 @@ def update_version_py():
         return
     ver = stdout.strip()
     f = open("{{ cookiecutter.repo_name }}/version.py", "w")
-    f.write(VERSION_PY % ver)
+    f.write(VERSION_PY % ver.decode())
     f.close()
     print("set {{ cookiecutter.repo_name }}/version.py to '%s'" % ver)
 
