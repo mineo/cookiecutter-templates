@@ -5,7 +5,7 @@ Installation
 PyPI
 ----
 
-Lala is available on the Python Package Index. This makes installing
+{{ cookiecutter.repo_name }} is available on the Python Package Index. This makes installing
 it with `pip <http://www.pip-installer.org>`_ as easy as::
 
     pip install {{ cookiecutter.repo_name }}
@@ -26,4 +26,3 @@ Now you can start hacking on the code or install it system-wide::
 
 Setup
 -----
-
