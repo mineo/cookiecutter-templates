@@ -1,0 +1,23 @@
+\documentclass[a4paper,10pt,fromphone,fromemail,fromrule=afteraddress]{scrlttr2}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\setkomavar{fromname}{ {{ cookiecutter.full_name }} }
+\setkomavar{fromemail}{ {{ cookiecutter.email }} }
+\setkomavar{fromaddress}{ absenderaddresse }
+\setkomavar{fromphone}{ {{ cookiecutter.phone}} }
+\setkomavar{subject}{ {{ cookiecutter.subject}} }
+\setkomavar{title}{ {{cookiecutter.title}} }
+
+\begin{document}
+\pagestyle{headings} % Print a heading on each page
+
+\begin{letter}{empfängeraddresse}
+
+\opening{}
+\closing{Mit freundlichen Grüßen}
+
+% scrlttr2 covers more things, like enclosures, etc. - check the koma
+% script documentation for them
+\end{letter}
+\end{document}
