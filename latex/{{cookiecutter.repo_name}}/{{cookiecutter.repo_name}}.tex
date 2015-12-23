@@ -18,8 +18,12 @@
 \usepackage{chngcntr}
 \counterwithout{figure}{chapter}
 
+
+\author{ {{cookiecutter.full_name}} }
+\title{ {{cookiecutter.title}} }
+
 % Inhaltsverzeichnis und Literaturverzeichnis verlinken
-\usepackage[backref, bookmarks]{hyperref}
+\usepackage[backref, bookmarks,pdfusetitle]{hyperref}
 
 % Subsections nicht im Inhaltsverzeichnis
 \setcounter{tocdepth}{2}
@@ -37,8 +41,6 @@
 \usemintedstyle{tango}
 \newminted{cpp}{linenos,}
 
-\author{ {{cookiecutter.full_name}} }
-\title{ {{cookiecutter.title}} }
 \begin{document}
 
 \maketitle
