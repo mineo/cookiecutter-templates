@@ -17,7 +17,7 @@ setup(name="{{ cookiecutter.repo_name }}",
                    "Operating System :: OS Independent",
                    "Programming Language :: Python :: 2.7"],
       description="{{ cookiecutter.short_description }}",
-      long_description=open("README.rst").read(),
+      long_description=open("README.txt").read(),
       setup_requires=["setuptools_scm"],
       use_scm_version={"write_to": "{{ cookiecutter.repo_name }}/version.py"},
       extras_require={
