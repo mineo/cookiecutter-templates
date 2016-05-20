@@ -1,5 +1,6 @@
 #!/usr/bin/env {{ cookiecutter.python_binary }}
 from __future__ import print_function
+from codecs import open
 from setuptools import setup
 
 
@@ -17,7 +18,7 @@ setup(name="{{ cookiecutter.repo_name }}",
                    "Operating System :: OS Independent",
                    "Programming Language :: Python :: 2.7"],
       description="{{ cookiecutter.short_description }}",
-      long_description=open("README.txt").read(),
+      long_description=open("README.txt", encoding="utf-8").read(),
       setup_requires=["setuptools_scm"],
       use_scm_version={"write_to": "{{ cookiecutter.repo_name }}/version.py"},
       extras_require={
