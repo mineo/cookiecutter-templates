@@ -1,0 +1,4 @@
+#+OPTIONS: toc:nil html-postamble:nil num:nil
+* {{ cookiecutter.repo_name }}
+
+[[https://{{%20cookiecutter.repo_name%20}}.rtfd.org][Documentation]]
