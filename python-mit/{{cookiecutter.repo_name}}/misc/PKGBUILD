@@ -8,7 +8,7 @@ license=('MIT')
 source=('git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name}}')
 md5sums=('SKIP')
 depends=('{{ cookiecutter.python_binary }}')
-makedepends=('git')
+makedepends=('git' '{{ cookiecutter.python_binary }}-setuptools-scm')
 
 pkgver(){
   cd "${srcdir}/{{ cookiecutter.repo_name }}"
