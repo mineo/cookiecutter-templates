@@ -1,7 +1,12 @@
 #!/usr/bin/env {{ cookiecutter.python_binary }}
 from __future__ import print_function
 from codecs import open
+from os import path
 from setuptools import setup
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 
 setup(name="{{ cookiecutter.repo_name }}",
@@ -18,7 +23,8 @@ setup(name="{{ cookiecutter.repo_name }}",
                    "Operating System :: OS Independent",
                    "Programming Language :: Python :: 2.7"],
       description="{{ cookiecutter.short_description }}",
-      long_description=open("README.txt", encoding="utf-8").read(),
+      long_description=long_description,
+      long_description_content_type='text/markdown',
       setup_requires=["setuptools_scm"],
       use_scm_version={"write_to": "{{ cookiecutter.repo_name }}/version.py"},
       extras_require={
