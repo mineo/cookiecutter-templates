@@ -26,7 +26,8 @@ setup(name="{{ cookiecutter.repo_name }}",
       long_description=long_description,
       long_description_content_type='text/markdown',
       python_requires='>=3.4.*',
-      setup_requires=["setuptools_scm"],
+      setup_requires=["pytest-runner", "setuptools_scm"],
+      tests_require=["pytest"],
       use_scm_version={"write_to": "{{ cookiecutter.repo_name }}/version.py"},
       extras_require={
           'docs': ['sphinx']
