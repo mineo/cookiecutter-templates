@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.7"
+cache: pip
+dist: xenial
+install:
+  - pip install tox
+  - pip install cookiecutter
+script:
+  - cookiecutter python-mit --no-input repo_name=testrepo
+  - cd testrepo
+  - tox --skip-missing-interpreters true
