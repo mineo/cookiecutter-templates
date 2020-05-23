@@ -5,5 +5,6 @@
     "repo_name": "",
     "year": "2018",
     "short_description": "",
-    "python_binary": "python3"
+    "python_binary": "python3",
+    "with_pkgbuild": ["yes", "no"],
 }
