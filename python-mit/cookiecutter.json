@@ -7,4 +7,5 @@
     "short_description": "",
     "python_binary": "python3",
     "with_pkgbuild": ["yes", "no"],
+    "with_rtfd": ["yes", "no"]
 }
